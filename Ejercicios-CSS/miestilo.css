@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+    font-family: 'Gugi', cursive;
+    background: linear-gradient(to right, #1f1bff, #21fff7);
+}
+div{
+    border: 2px solid #1f1bff;
+    margin: 10px;
+    padding: 5px 30px;
+    border-radius: 15px;
+    box-shadow: 10px 12px #229914;
+}
+#principal{
+    width: 50px;
+    float: left;
+    border-radius: 50%;
+}
+div h3{
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 10px 5px #999999;
+}
