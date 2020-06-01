@@ -150,9 +150,57 @@ function dibujar(e) {
         ctx.fill;
     }
 }
-function limpiarcanvas() {
+function limpiarcanvas(){
     var canvas = document.getElementById("canvasadabujar");
     var ctx = canvas.getContext("2d");
 
     canvas.width = canvas.width;
+}
+function dibujarcuadriculado() {
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var altmax = canvas.height;
+    var anchomax = canvas.width;
+
+    // Lineas Horizontales
+    ctx.beginPath();
+    for(var i=0;i<altmax;){
+        ctx.moveTo(0,i);
+        ctx.lineTo(anchomax,i);
+        ctx.strokeStyle = "#991219";
+        ctx.stroke();
+        i=i+20;
+    }
+    ctx.closePath();
+
+    // Lineas Verticales
+
+    ctx.beginPath();
+    for(var i=0;i<anchomax;){
+        ctx.moveTo(i,0);
+        ctx.lineTo(i,altmax);
+        ctx.strokeStyle = "#990f8a";
+        ctx.stroke();
+        i=i+20;
+    }
+    ctx.closePath();
+
+    // Eje x
+
+    ctx.beginPath();
+    ctx.moveTo(0,altmax/2);
+    ctx.lineTo(anchomax,altmax/2);
+    ctx.strokeStyle = "rgba(6,0,6,0.98)";
+    ctx.stroke();
+    ctx.closePath()
+
+    // Eje y
+
+    ctx.beginPath();
+    ctx.moveTo(anchomax/2,0);
+    ctx.lineTo(anchomax/2,altmax);
+    ctx.strokeStyle = "rgba(6,0,6,0.98)";
+    ctx.stroke();
+    ctx.closePath()
+
 }
