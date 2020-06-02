@@ -135,11 +135,11 @@ function dibujarCirCuad() {
     ctx.fill();
 }
 var bandera;
-function dibujar(e) {
-    var canvas = document.getElementById("canvasadabujar");
+function dibujar(event) {
+    var canvas = document.getElementById("canvasadibujar");
     var ctx = canvas.getContext("2d");
-    var posX = e.clientX;
-    var posY = e.clientY;
+    var posX = event.clientX;
+    var posY = event.clientY;
     console.log(posX, posY);
 
     canvas.onmousedown = function(){bandera = true};
@@ -151,7 +151,7 @@ function dibujar(e) {
     }
 }
 function limpiarcanvas(){
-    var canvas = document.getElementById("canvasadabujar");
+    var canvas = document.getElementById("canvasadibujar");
     var ctx = canvas.getContext("2d");
 
     canvas.width = canvas.width;
