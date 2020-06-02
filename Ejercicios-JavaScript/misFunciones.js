@@ -204,3 +204,19 @@ function dibujarcuadriculado() {
     ctx.closePath()
 
 }
+function dibujarimagen(posX, posY) {
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+    console.log(posX, posY);
+    var img = new Image();
+    img.src = "images/auto.png";
+
+    canvas.width = canvas.width;
+
+    img.onload = function(){
+        ctx.drawImage(img,posX,posY);
+    }
+
+
+}
